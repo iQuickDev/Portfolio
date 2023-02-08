@@ -15,7 +15,7 @@ const songs: Song[] = [
     {
         title: 'Little Dark Age (RMX)',
         author: 'MGMT',
-        id: 'eeIalfQ09_E',
+        id: 'Djd4C64yYzU',
         duration: 158,
     },
     {
@@ -273,6 +273,12 @@ function attachKeybinds() {
     color: #FFF;
     font-size: 1.3rem;
     cursor: pointer;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+    color: #e443de;
+    transition: .3s;
 }
 
 .player-animation {

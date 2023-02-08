@@ -21,6 +21,7 @@
     "vue-glitched-writer": "^1.2.2",
     "vue-matrix-digit-rain": "^1.0.1",
     "vue-router": "4",
+    "vueperslides": "^3.5.1",
     "xterm": "^4.19.0",
     "youtube-player": "^5.5.2"
   },

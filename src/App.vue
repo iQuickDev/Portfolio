@@ -3,7 +3,7 @@
 import { RetrowaveScene } from './assets/retrowave-scene/retrowave_scene.js'
 //@ts-ignore
 import VueMatrixRaindrop from 'vue-matrix-digit-rain'
-import ShakeDetector from 'shake-detector';
+import ShakeDetector from 'shake-detector'
 import Navbar from './components/Navbar.vue'
 import MusicPlayer from './components/MusicPlayer.vue'
 import Terminal from './components/Terminal.vue'
@@ -15,7 +15,7 @@ window.retrowave = retrowave
 
 new ShakeDetector({
 	threshold: 5,
-	debounceDelay: 50
+	debounceDelay: 800
 }).confirmPermissionGranted().subscribe(() => {
 	if (window.isHacked) {
 		(document.querySelector('#vue-matrix-raindrop') as HTMLElement).style.opacity = '0'

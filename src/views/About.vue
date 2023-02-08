@@ -125,7 +125,7 @@ a:hover
     border: 2px solid #e443de;
     border-radius: 50%;
     width: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .contacts img {
@@ -159,6 +159,10 @@ a:hover
 }
 
 @media screen and (max-width: 1400px) {
+    .pfp {
+        width: 90px;
+    }
+
     .info {
         left: 35vw;
         width: 60%;
@@ -197,6 +201,14 @@ a:hover
         bottom: 20px;
         width: 90%;
         text-align: center;
+    }
+
+    .contacts img {
+        width: 20%;
+        transition: .5s;
+    }
+    .pfp {
+        width: 100px;
     }
 }
 </style>

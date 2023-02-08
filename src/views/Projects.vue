@@ -1,14 +1,16 @@
 <script setup lang="ts">
-
+import Slideshow from '../components/Slideshow.vue'
 </script>
 
 <template>
-<h1 class="placeholder">This page is being built</h1>
+  <div class="projects-wrapper">
+    <Slideshow></Slideshow>
+  </div>
 </template>
 
 <style scoped>
-.placeholder
-{
+
+.placeholder {
     position: absolute;
     width: max-content;
     max-width: 90%;
