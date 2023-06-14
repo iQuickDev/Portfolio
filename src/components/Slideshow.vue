@@ -92,9 +92,6 @@ function changeSlide(slide : any) {
     align-items: center;
     height: 70vh;
 }
-.vueperslides__arrow svg {
-    stroke: red;
-}
 
 .slide-description {
     position: absolute;
@@ -136,6 +133,7 @@ a {
 a:hover {
     text-shadow: 0 0 5px #9c43e4;
     transition: .25s;
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 3840px) and (min-height: 2160px) {

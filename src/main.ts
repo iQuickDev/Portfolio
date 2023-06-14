@@ -1,11 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faPlay, faPause, faForward, faBackward } from '@fortawesome/free-solid-svg-icons'
 import router from './router/router'
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+import { FaPlay, FaPause, FaForward, FaBackward, ViFileTypeDocker2, ViFileTypeJs, ViFileTypeTypescript, ViFileTypeMysql, ViFileTypeVue, ViFileTypeRust, SiSocketdotio, SiFastify, FcLinux, SiWebrtc, ViFileTypePhp3, SiCloudflare, SiBootstrap, ViFileTypeCss, ViFileTypeHtml, ViFileTypeJar, ViFileTypeCsharp, ViFileTypeMongo } from "oh-vue-icons/icons";
+addIcons(FaPlay, FaPause, FaForward, FaBackward, ViFileTypeDocker2, ViFileTypeJs, ViFileTypeTypescript, ViFileTypeMysql, ViFileTypeVue, ViFileTypeRust, SiSocketdotio, SiFastify, FcLinux, SiWebrtc, ViFileTypePhp3, SiCloudflare, SiBootstrap, ViFileTypeCss, ViFileTypeHtml, ViFileTypeJar, ViFileTypeCsharp, ViFileTypeMongo)
 
-
-library.add(faPlay, faPause, faForward, faBackward)
-
-createApp(App).use(router).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+createApp(App).use(router).component('v-icon', OhVueIcon).mount('#app')

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import GlitchedWriter from 'vue-glitched-writer'
-import profilePicture from '../assets/images/pfp.png'
+import profilePicture from '../assets/images/pfp.jpg'
 
 const subtitles: string[] = [
   "Fullstack Developer",

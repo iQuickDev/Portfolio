@@ -184,14 +184,14 @@ function attachKeybinds() {
                     </div>
                     <div class="controls">
                         <button>
-                            <font-awesome-icon @click="backwards" icon="fa-solid fa-backward" />
+                            <v-icon @click="backwards" name="fa-backward" :scale="1.2" />
                         </button>
                         <button>
-                            <font-awesome-icon id="play" @click="playSong" icon="fa-play" v-show="!isPlaying" />
-                            <font-awesome-icon id="pause" @click="playSong" icon="fa-pause" v-show="isPlaying" />
+                            <v-icon id="play" @click="playSong" name="fa-play" v-show="!isPlaying" :scale="1.2"/>
+                            <v-icon id="pause" @click="playSong" name="fa-pause" v-show="isPlaying" :scale="1.2" />
                         </button>
                         <button>
-                            <font-awesome-icon @click="forwards" icon="fa-solid fa-forward" />
+                            <v-icon @click="forwards" name="fa-forward" :scale="1.2" />
                         </button>
                     </div>
                 </div>
@@ -210,16 +210,16 @@ function attachKeybinds() {
         <div class="keybinds">
             <ul class="keys">
                 <li>[Space] <br>
-                    <font-awesome-icon icon="fa-play" /> /
-                    <font-awesome-icon icon="fa-pause" />
+                    <v-icon name="fa-play" scale="0.9" /> /
+                    <v-icon name="fa-pause" scale="0.9" />
                 </li>
                 <li>[←]
                     <br>
-                    <font-awesome-icon icon="fa-backward" />
+                    <v-icon name="fa-backward" />
                 </li>
                 <li>[→]
                     <br>
-                    <font-awesome-icon icon="fa-forward" />
+                    <v-icon name="fa-forward" />
                 </li>
             </ul>
         </div>

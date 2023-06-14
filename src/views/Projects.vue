@@ -4,7 +4,7 @@ import Slideshow from '../components/Slideshow.vue'
 
 <template>
   <div class="projects-wrapper">
-    <Slideshow></Slideshow>
+    <Slideshow/>
   </div>
 </template>
 
