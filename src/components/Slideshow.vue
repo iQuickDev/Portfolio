@@ -86,6 +86,7 @@ function changeSlide(slide : any) {
 
 <style scoped>
 .slideshow-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,19 +95,15 @@ function changeSlide(slide : any) {
 }
 
 .slide-description {
-    position: absolute;
-    right: 50%;
-    bottom: 2%;
-    transform-origin: bottom;
-    transform: translate(50%);
-    width: 500px;
-    text-align: center;
-    margin: auto;
-    background: #0005;
-    padding: 10px;
-    border-radius: 5px;
-    backdrop-filter: blur(3px);
-    transition: .5s;
+  position: absolute;
+  bottom: -25%;
+  width: 500px;
+  text-align: center;
+  background: #0005;
+  padding: 10px;
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+  transition: all 1s;
 }
 
 .slideshow-wrapper {
@@ -161,7 +158,7 @@ a:hover {
 @media screen and (max-width: 1100px) {
     .slide-description {
         width: 400px;
-        bottom: 20%;
+        bottom: -4%;
     }
 }
 

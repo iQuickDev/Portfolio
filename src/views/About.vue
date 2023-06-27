@@ -59,7 +59,7 @@ let age: string = (
       <h1>Programming Experience</h1>
       <p class="introduction">
         I started programming with dedication in 2019, my first language was C#
-        for personal projects; i learned how to make Windows 10 applications
+        for personal projects; i learned how to make applications for Windows 10
         using the .NET Framework and WinForms for the GUIs and made some
         projects like
         <a href="https://github.com/iQuickDev/OTCLoader" target="_blank"
@@ -127,6 +127,8 @@ let age: string = (
         <Skill icon="si-cloudflare" name="Cloudflare" textColor="#FFF" />
         <Skill icon="si-bootstrap" name="Bootstrap" textColor="#FFF" />
       </div>
+      <HorizontalDivider />
+      <h1>Experience</h1>
     </div>
   </div>
 </template>

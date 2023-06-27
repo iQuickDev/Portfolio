@@ -71,7 +71,13 @@ let commands: Command[] = [
         usage: 'navigate <name> : string',
         execute: (args: string[]) => {
             if (args.length > 0) {
+                console.log(args[0])
+                if (args[0].toLowerCase() == 'home') {
+                    router.push('/')
+                }
+                else
                 router.push(args[0])
+
                 return `${colors.blue}Now viewing ${colors.magenta}${args[0]}`
             }
             else {

@@ -25,10 +25,16 @@ const songs: Song[] = [
         duration: 212,
     },
     {
-        title: 'Neon Skies',
-        author: 'Villano',
-        id: '4f-bisxhb4w',
-        duration: 167,
+        title: 'Messages from the Stars',
+        author: 'Rah Band',
+        id: 'j_Di18kwjKk',
+        duration: 255,
+    },
+    {
+        title: 'INVASION',
+        author: 'borgawr',
+        id: 'LSvoBvNVmT0',
+        duration: 167
     }
 ]
 
@@ -46,7 +52,7 @@ onMounted(() => {
     scene.add(light)
     scene.add(light2)
     const geometry = new THREE.IcosahedronGeometry(1.5, 2)
-    const material = new THREE.MeshStandardMaterial({ color: 0x00ff95, roughness: 0, metalness: .9, wireframe: true })
+    const material = new THREE.MeshStandardMaterial({ color: 0xe443de, roughness: 0, metalness: .9, wireframe: true })
     const object = new THREE.Mesh(geometry, material)
     scene.add(object)
     camera.position.z = 3;
@@ -285,7 +291,7 @@ function attachKeybinds() {
     width: 150px;
     height: 120px;
     border-radius: 10px;
-    filter: drop-shadow(0 0 1px #0F0);
+    filter: drop-shadow(0 0 1px #5900ff);
 }
 
 .playing
