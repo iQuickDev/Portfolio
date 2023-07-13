@@ -246,8 +246,8 @@ RetrowaveScene.prototype.setPostProcessing = function () {
 
 	// CRT EFFECT (FILM PASS)
 	this.effectFilm = new FilmPass(
-		0.2, // noise intensity
-		0.75, // scanline intensity
+		0.20, // noise intensity
+		0.8, // scanline intensity
 		2048, // scanline count
 		false // grayscale
 	);

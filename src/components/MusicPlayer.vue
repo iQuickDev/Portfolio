@@ -407,7 +407,7 @@ h6 {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .musicplayer-wrapper {
         display: none;
     }

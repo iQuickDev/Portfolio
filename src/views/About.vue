@@ -28,7 +28,7 @@ let age: string = (
           Hi, my name is Leonardo and i am a {{ age }} years old Full Stack
           Developer based in Italy. Programming has been my passion since 2019
           and i'm pursuing it by making lots of personal projects as well as
-          school ones. I really enjoy exploring open source software like linux
+          school ones. I really enjoy exploring open source software like Linux
           and GNU, i think that FOSS gives a lot of benefits to the community
           and the developers to build better software with the help from all
           over the world. Take a look at my skills on the panel to the right and
@@ -54,51 +54,71 @@ let age: string = (
           ><img id="youtube" :src="youtube"
         /></a>
       </div>
+      <p class="email">
+        Send emails to <a href="mailto: root@iquick.dev">root@iquick.dev</a>
+      </p>
     </div>
     <div class="info container">
       <h1>Programming Experience</h1>
-      <p class="introduction">
-        I started programming with dedication in 2019, my first language was C#
-        for personal projects; i learned how to make applications for Windows 10
-        using the .NET Framework and WinForms for the GUIs and made some
-        projects like
-        <a href="https://github.com/iQuickDev/OTCLoader" target="_blank"
-          >OTCLoader</a
-        >,
-        <a href="https://github.com/iQuickDev/MCClientManager" target="_blank"
-          >MCClientManager</a
-        >
-        and
-        <a
-          href="https://github.com/iQuickDev/DiscordTotalCallTime"
-          target="_blank"
-          >DiscordTotalCallTime</a
-        >, that was my first time dealing with Object Oriented Programming.
-        Moving on, school has taught me the very basics of C++, Java, PHP (i
-        hate that one just like you all do) and a little bit of WordPress which
-        i used to build
-        <a href="https://lorenzovanninicartoon.it" target="_blank"
-          >this website</a
-        >
-        for an Italian illustrator. Most of my knowledge comes from self
-        tuition; in fact i've been learning a lot of concepts by myself to then
-        implement in personal projects like
-        <a href="https://github.com/iQuickDev/WhatsappBOT" target="_blank"
-          >WhatsappBOT</a
-        >,
-        <a href="https://github.com/iQuickDev/OmegleInterceptor" target="_blank"
-          >OmegleInterceptor</a
-        >
-        and
-        <a href="https://github.com/iQuickDev/OpenCloud" target="_blank"
-          >OpenCloud</a
-        >, as you can see all these projects are written in JavaScript which is
-        the language i'm the most proficient with. Talking about the frontend i
-        really like to use the Vue framework to build Web applications (just
-        like this one). Let's now consider databases, i learned to use MongoDB
-        by myself and relational DBs in school being able to choose between SQL
-        and NoSQL based on the use case.
-      </p>
+      <div class="introduction">
+        <h2>How I started</h2>
+        <p>
+          I ventured into programming in 2019, and my first language was C#. I
+          delved into the .NET Framework and WinForms to create applications for
+          Windows 10 like
+          <a href="https://github.com/iQuickDev/OTCLoader" target="_blank"
+            >OTCLoader</a
+          >,
+          <a href="https://github.com/iQuickDev/MCClientManager" target="_blank"
+            >MCClientManager</a
+          >, and
+          <a
+            href="https://github.com/iQuickDev/DiscordTotalCallTime"
+            target="_blank"
+            >DiscordTotalCallTime</a
+          >. These projects were my first introduction to Object Oriented
+          Programming.
+        </p>
+        <h2>Talking about school</h2>
+        <p>
+          My school introduced me to the basics of C++, Java, PHP (which I
+          dislike like everyone else) and even included some training for
+          WordPress, which I used to build
+          <a href="https://lorenzovanninicartoon.it" target="_blank"
+            >this website</a
+          >
+          for an Italian illustrator. In addition to that, i also learned some
+          networking concepts such as subnetting and supernetting, setting up
+          DHCP, SSH, VLANs, VPN servers and configuring routers and switches. I
+          graduated with a score of 87/100 and am now seeking a job in IT.
+        </p>
+        <h2>Where my passion has brought me</h2>
+        <p>
+          Most of my knowledge comes from self-teaching. I have acquired a lot
+          of concepts by myself and implemented them in personal projects such
+          as
+          <a href="https://github.com/iQuickDev/WhatsappBOT" target="_blank"
+            >WhatsappBOT</a
+          >,
+          <a
+            href="https://github.com/iQuickDev/OmegleInterceptor"
+            target="_blank"
+            >OmegleInterceptor</a
+          >, and
+          <a href="https://github.com/iQuickDev/OpenCloud" target="_blank"
+            >OpenCloud</a
+          >. As you can see, all these projects were written in JavaScript,
+          which is the language I am most proficient in. When it comes to the
+          frontend, I prefer using the Vue framework to build web applications,
+          just like this one. In terms of databases, I taught myself how to use
+          MongoDB and learned about relational databases in school, where I
+          gained experience choosing between SQL and NoSQL based on the use
+          case. Right now, I'm working on my home lab which consists of a
+          Raspberry Pi handling many services such as Home Assistant, PiHole and
+          Nextcloud. I've learned a lot of things from this experience and will
+          continue to configure and install new services.
+        </p>
+      </div>
       <HorizontalDivider />
       <h1>Programming Skills & Knowledge</h1>
       <div class="skills-container">
@@ -124,11 +144,37 @@ let age: string = (
         <Skill icon="si-socketdotio" name="Socket.io" textColor="#FFF" />
         <Skill icon="si-fastify" name="Fastify" textColor="#FFF" />
         <Skill icon="si-webrtc" name="WebRTC" textColor="#FFF" />
-        <Skill icon="si-cloudflare" name="Cloudflare" textColor="#FFF" />
-        <Skill icon="si-bootstrap" name="Bootstrap" textColor="#FFF" />
+        <Skill icon="si-cloudflare" name="Cloudflare" textColor="#F6821F" />
+        <Skill icon="si-bootstrap" name="Bootstrap" textColor="#6F2CF4" />
       </div>
       <HorizontalDivider />
-      <h1>Experience</h1>
+      <h1>Non-Tech Skills</h1>
+      <div class="skills-container">
+        <Skill
+          icon="gi-world"
+          name="Italian (Native)"
+          textColor="#41B883"
+          animation="spin"
+        />
+        <Skill
+          icon="gi-world"
+          name="English (Proficient)"
+          textColor="#0096E6"
+          animation="spin"
+        />
+        <Skill
+          icon="fa-handshake"
+          name="Teamworking"
+          textColor="#F1C007"
+          animation="float"
+        />
+        <Skill
+          icon="gi-light-bulb"
+          name="Problem Solving"
+          textColor="#F1C007"
+          animation="ring"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -205,10 +251,19 @@ a:hover {
   letter-spacing: 0.2px;
 }
 
+.info h1 {
+  margin-top: 10px;
+}
+
 .info p {
   margin: 0;
-  padding: 10px;
+  padding: 5px;
   margin: auto;
+}
+
+.info h2 {
+  margin-top: 5px;
+  text-align: center;
 }
 
 .description {
@@ -256,6 +311,10 @@ a:hover {
   filter: drop-shadow(-5px -5px 0px #f00);
 }
 
+.email {
+  font-size: 1.1rem;
+}
+
 @media screen and (max-width: 1400px) {
   .pfp {
     width: 90px;
@@ -278,13 +337,6 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
-  .contacts {
-    width: 90%;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 600px) {
   .about-wrapper {
     overflow: auto;
   }
@@ -293,6 +345,7 @@ a:hover {
     margin: auto;
     position: initial;
     width: 90%;
+    height: max-content;
     margin-bottom: 15px;
   }
 

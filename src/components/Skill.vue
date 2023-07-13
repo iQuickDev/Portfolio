@@ -3,14 +3,14 @@ defineProps({
   icon: String,
   name: String,
   textColor: String,
-  backgroundColor: String,
+  animation: String,
 });
 </script>
 
 <template>
   <div class="skill-wrapper">
     <div class="icon-wrapper">
-      <v-icon :name="icon" :scale="2"></v-icon>
+      <v-icon :name="icon" :scale="2" :fill="textColor" :animation="animation" speed="slow"></v-icon>
     </div>
     <div class="skill-name-container">
       <h3 class="skill-name" :style="{color: textColor}">{{ name }}</h3>
