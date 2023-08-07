@@ -8,10 +8,9 @@ import Navbar from "./components/Navbar.vue";
 import MusicPlayer from "./components/MusicPlayer.vue";
 import Terminal from "./components/Terminal.vue";
 import { onBeforeMount, ref } from "vue";
-let retrowave = new RetrowaveScene("src/assets/retrowave-scene/");
-const refresher = ref(0);
+window.retrowave = new RetrowaveScene("src/assets/retrowave-scene/");
 window.isHacked = false;
-window.retrowave = retrowave;
+const refresher = ref(0);
 
 new ShakeDetector({
   threshold: 5,
@@ -47,7 +46,7 @@ new ShakeDetector({
   .start();
 
 document.addEventListener("DOMContentLoaded", () => {
-  retrowave.prepareScene(false, true);
+  window.retrowave.prepareScene(false, true);
 });
 
 onBeforeMount(() => {

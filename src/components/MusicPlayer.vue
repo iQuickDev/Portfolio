@@ -242,7 +242,7 @@ function attachKeybinds() {
 }
 
 .player-wrapper {
-    background: url('../assets/images/musicplayer-background.gif') no-repeat;
+    background: url('../assets/images/musicplayer-background.webp') no-repeat;
     background-size: cover;
     width: 20rem;
     height: 10rem;
@@ -265,7 +265,7 @@ function attachKeybinds() {
 }
 
 .controls {
-    width: 50%;
+    width: max-content;
     text-align: center;
     background: #e443de40;
     border-radius: 5px;

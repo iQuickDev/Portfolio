@@ -22,7 +22,7 @@ const projects = [
     {
         name: 'Lorenzo Vannini',
         image: illustratorImg,
-        link: 'https://www.lorenzovannini.it',
+        link: 'https://www.lorenzovanninicartoon.it',
         description: 'i got to work with three companies at once thanks to my school, collaborating with 3 other students to make this website for the Italian artist "Lorenzo Vannini"'
     },
     {

@@ -86,6 +86,7 @@ img {
   border-radius: 50%;
   border: 2px solid #e443de;
   user-select: none;
+  image-rendering: optimizeQuality;
 }
 
 @media screen and (max-width: 600px) {
