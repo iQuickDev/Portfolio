@@ -32,12 +32,6 @@ const projects = [
         description: 'small project to scan the internet for minecraft servers, really fun to visit random people\'s servers'
     },
     {
-        name: 'ChatBridger',
-        image: chatbridgerImg,
-        link: 'https://github.com/iquickdev/chatbridger',
-        description: 'quick solution to bridge three chats together: WhatsApp, Telegram and Discord'
-    },
-    {
         name: 'OpenCloud',
         image: opencloudImg,
         link: 'https://github.com/iquickdev/opencloud',
@@ -70,6 +64,7 @@ function changeSlide(slide : any) {
 <template>
     <div class="slideshow-container">
         <div class="slideshow-wrapper">
+            <span class="skeleton-loading"></span>
             <vueper-slides @slide="changeSlide" class="no-shadow" :visible-slides="1" :arrows="true" :bullets="false"
                 :slide-ratio="1080 / 1920">
                 <vueper-slide v-for="project of projects" :key="project.name" :infinite="true" :image="project.image" />
@@ -119,6 +114,17 @@ function changeSlide(slide : any) {
     image-rendering: optimizeQuality;
 }
 
+.skeleton-loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%), #606060C0;
+  background-repeat: repeat-y;       
+  background-size: 50px 100px;        
+  background-position: 0 0;
+  animation: skeleton 1s infinite; 
+}
 
 a {
     color: #e443de;
@@ -131,6 +137,12 @@ a:hover {
     text-shadow: 0 0 5px #9c43e4;
     transition: .25s;
     text-decoration: underline;
+}
+
+@keyframes skeleton {
+    to {
+    background-position: 100% 0, /* move highlight to right */ 0 0;
+  }
 }
 
 @media screen and (min-width: 3840px) and (min-height: 2160px) {
