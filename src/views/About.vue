@@ -128,8 +128,6 @@ let age: string = (
           name="TypeScript"
           textColor="#3178C6"
         />
-        <Skill icon="vi-file-type-mysql" name="MySQL" textColor="#00758F" />
-        <Skill icon="vi-file-type-mongo" name="MongoDB" textColor="#4FA94C" />
         <Skill icon="vi-file-type-rust" name="Rust" textColor="#A04F12" />
         <Skill icon="vi-file-type-php3" name="PHP" textColor="#8993BE" />
         <Skill icon="vi-file-type-csharp" name=".NET C#" textColor="#348231" />
