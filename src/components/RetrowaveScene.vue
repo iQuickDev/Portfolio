@@ -1,33 +1,23 @@
-"use strict";
-
-/////////////////////////////////////////////////////////////////////////////////
-// THINGS TO IMPROVE
-/////////////////////////////////////////////////////////////////////////////////
-// OPTIMIZE OVERALL PERFORMANCE!
-// Adjust visuals according to performance
-// Tinker some more with the palmtrees/pyramids placement algorithm (far from being perfect actually)
-// Adapt pyramid placement algorithm to palmtrees
-// Pyramids + Palm trees : I want to be able to control their linewidth properly (the linewidth setting has no effect, it needs a workaroud)
-// Pyramids are "duplicated" to display their wireframe (blue) over their solid color (black), would be better to achieve this effect with a tweaked shader instead
-// Palmtrees : Import a proper 3D model and make it work with the current shaders
-// Adjust ReinhardToneMapping settings for better bloom
-// Add radomly flying birds
-// Find a way to generate procedural sky only on the visible area (and ignore the rest) to ease ressource usage
-
-import * as THREE from "./node_modules/three/build/three.module.js";
-
-import Stats from "./node_modules/three/examples/jsm/libs/stats.module.js"; // To get FPS counter
-
-import { BufferGeometryUtils } from "./node_modules/three/examples/jsm/utils/BufferGeometryUtils.js"; // To be able to buffer geometries
-import { SVGLoader } from "./node_modules/three/examples/jsm/loaders/SVGLoader.js"; // To be able to load SVG graphics
-import { SceneUtils } from "./node_modules/three/examples/jsm/utils/SceneUtils.js";
-
-// POST-PROCESSING
-import { EffectComposer } from "./node_modules/three/examples/jsm/postprocessing/EffectComposer.js"; // To merge post-processing effects
-import { RenderPass } from "./node_modules/three/examples/jsm/postprocessing/RenderPass.js"; // To render post-processing effects
-import { UnrealBloomPass } from "./node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js"; // Bloom/Glow
-import { GlitchPass } from "./node_modules/three/examples/jsm/postprocessing/GlitchPass.js"; // Glitch effect
-import { FilmPass } from "./node_modules/three/examples/jsm/postprocessing/FilmPass.js"; // CRT effect
+<script setup lang="ts">
+// @ts-nocheck
+import * as THREE from "three/build/three.module.js";
+import Stats from "three/examples/jsm/libs/stats.module.js"; // To get FPS counter
+import { BufferGeometryUtils } from "three/examples/jsm/utils/BufferGeometryUtils.js"; // To be able to buffer geometries
+import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader.js"; // To be able to load SVG graphics
+import { SceneUtils } from "three/examples/jsm/utils/SceneUtils.js";
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js"; // To merge post-processing effects
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js"; // To render post-processing effects
+import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js"; // Bloom/Glow
+import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass.js"; // Glitch effect
+import { FilmPass } from "three/examples/jsm/postprocessing/FilmPass.js"; // CRT effect
+import Sun from '../assets/images/scenery/sun.svg'
+import CityFar from '../assets/images/scenery/city_far.svg'
+import CityClose from '../assets/images/scenery/city_close.svg'
+import pX from '../assets/images/skybox/px.png'
+import nX from '../assets/images/skybox/nx.png'
+import pY from '../assets/images/skybox/py.png'
+import nZ from '../assets/images/skybox/nz.png'
+import invisible from '../assets/images/skybox/invisible.png'
 
 /////////////////////////////////////////////////////////////////////////////////
 // RETROWAVE SCENE
@@ -37,7 +27,7 @@ import { FilmPass } from "./node_modules/three/examples/jsm/postprocessing/FilmP
  * RetrowaveScene class
  * On call, sets all minimum requirement for the scene to work
  */
-export var RetrowaveScene = function (scenePath) {
+const RetrowaveScene = function (scenePath) {
 	// DEFAULT ANIMATION SPEED
 	// This can be changed anytime with setAnimationSpeed method (changing directly this.animationSpeed won't have any effect as the whole animation relies on shaders uniforms)
 	this.animationSpeed = 15;
@@ -56,18 +46,18 @@ export var RetrowaveScene = function (scenePath) {
 	// RESOURCES
 	// You can set all SVG files you want to load in this array...
 	this.svgFiles = [
-		[`./assets/retrowave-scene/scenery/sun.svg`, 0, 40, -500, 0.11, "sun"],
-		[`./assets/retrowave-scene/scenery/city_far.svg`, 0, 15, -450, 0.4, "cityFar"],
-		[`./assets/retrowave-scene/scenery/city_close.svg`, 0, 28, -300, 0.2, "cityClose"],
+		[Sun, 0, 40, -500, 0.11, "sun"],
+		[CityFar, 0, 15, -450, 0.4, "cityFar"],
+		[CityClose, 0, 28, -300, 0.2, "cityClose"],
 	];
 	// ... and specify your skybox textures here
 	this.skybox = [
-		`./assets/retrowave-scene/skybox/${this.textureResolution}/px.png`, // X+
-		`./assets/retrowave-scene/skybox/${this.textureResolution}/nx.png`, // X-
-		`./assets/retrowave-scene/skybox/${this.textureResolution}/py.png`, // Y+
-		`./assets/retrowave-scene/skybox/${this.textureResolution}/invisible.png`, // Y- (out of camera FoV here)
-		`./assets/retrowave-scene/skybox/${this.textureResolution}/invisible.png`, // Z+ (out of camera FoV here)
-		`./assets/retrowave-scene/skybox/${this.textureResolution}/nz.png`, // Z-
+		pX, // X+
+		nX, // X-
+		pY, // Y+
+		invisible, // Y- (out of camera FoV here)
+		invisible, // Z+ (out of camera FoV here)
+		nZ, // Z-
 	];
 
 	// POSITION HISTORY (avoid overlapping geometries)
@@ -1191,3 +1181,16 @@ RetrowaveScene.prototype.randomize = function (min, max, setting) {
 
 	return randomResult;
 };
+
+let retrowave = new RetrowaveScene()
+window.retrowave = retrowave
+
+</script>
+
+<template>
+
+</template>
+
+<style scoped>
+
+</style>

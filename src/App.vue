@@ -1,14 +1,12 @@
 <script setup lang="ts">
 //@ts-ignore
-import { RetrowaveScene } from "./assets/retrowave-scene/retrowave_scene.js";
-//@ts-ignore
 import VueMatrixRaindrop from "vue-matrix-digit-rain";
 import ShakeDetector from "shake-detector";
 import Navbar from "./components/Navbar.vue";
 import MusicPlayer from "./components/MusicPlayer.vue";
 import Terminal from "./components/Terminal.vue";
+import RetrowaveScene from "./components/RetrowaveScene.vue"
 import { onBeforeMount, ref } from "vue";
-window.retrowave = new RetrowaveScene("src/assets/retrowave-scene/");
 window.isHacked = false;
 const refresher = ref(0);
 
@@ -97,6 +95,7 @@ function adjustSize() {
     :textColor="'#e443de'"
     :textContent="'ァィゥェォカキクケコサシスセソタチツテトナニヌネノパビピプペポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶヷヸヹヺ'"
   />
+  <RetrowaveScene/>
 </template>
 
 <style>
@@ -111,7 +110,7 @@ body {
   padding: 0;
   background-color: #01001e;
   color: #fff;
-  cursor: url("cursor.png"), auto;
+  cursor: url("@/assets/images/cursor.png"), auto;
   overflow: hidden;
 }
 
