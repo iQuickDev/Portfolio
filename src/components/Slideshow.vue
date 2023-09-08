@@ -2,12 +2,11 @@
 //@ts-ignore
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
-import chatbridgerImg from '../assets/images/project_chatbridger.jpg'
-import illustratorImg from '../assets/images/project_illustrator.jpg'
-import mcserverscannerImg from '../assets/images/project_mcserverscanner.jpg'
-import opencloudImg from '../assets/images/project_opencloud.jpg'
-import safeImg from '../assets/images/project_safe.jpg'
-import javachatImg from '../assets/images/project_javachat.jpg'
+import illustratorImg from '../assets/images/project_illustrator.webp'
+import mcserverscannerImg from '../assets/images/project_mcserverscanner.webp'
+import opencloudImg from '../assets/images/project_opencloud.webp'
+import safeImg from '../assets/images/project_safe.webp'
+import javachatImg from '../assets/images/project_javachat.webp'
 import { onMounted, ref } from 'vue'
 
 const currentSlide = ref(0)

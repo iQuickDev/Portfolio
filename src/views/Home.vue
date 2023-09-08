@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import GlitchedWriter from "vue-glitched-writer";
-import profilePicture from "../assets/images/pfp.jpg";
+import profilePicture from "../assets/images/vapor.webp";
 
 const subtitles: string[] = [
   "Fullstack Developer",
@@ -80,13 +80,13 @@ const subtitles: string[] = [
 }
 
 img {
-  width: 60%;
-  height: 60%;
+  margin-top: -15%;
+  width: 75%;
+  height: 75%;
   object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #e443de;
   user-select: none;
-  image-rendering: optimizeQuality;
+  filter: drop-shadow(0 0 3px #637FEF);
+  /* make this cuter with multiple colors */
 }
 
 @media screen and (max-width: 600px) {

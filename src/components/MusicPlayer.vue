@@ -5,11 +5,16 @@ import { onMounted, ref } from 'vue'
 import YoutubePlayer from 'youtube-player'
 import { YouTubePlayer } from 'youtube-player/dist/types'
 import { Song } from '../services/interfaces'
+import interact from 'interactjs'
 
 let player: YouTubePlayer | null = null
 let timeElapsed = ref(0)
 const isPlaying = ref(false)
 const songIndex = ref(0)
+const position = ref({
+    x: 0,
+    y: 0
+})
 
 const songs: Song[] = [
     {
@@ -45,12 +50,10 @@ onMounted(() => {
     document.querySelector('.player-animation')?.appendChild(renderer.domElement)
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000)
-    const light = new THREE.DirectionalLight(0xffffff, 10)
-    const light2 = new THREE.DirectionalLight(0xffffff, 10)
-    light.position.set(0, 0, 1)
-    light2.position.set(0, 0, -1)
-    scene.add(light)
-    scene.add(light2)
+    const lights = [new THREE.DirectionalLight(0xffffff, 10), new THREE.DirectionalLight(0xffffff, 10)]
+    lights[0].position.set(0, 0, 1)
+    lights[1].position.set(0, 0, -1)
+    scene.add(...lights)
     const geometry = new THREE.IcosahedronGeometry(1.5, 2)
     const material = new THREE.MeshStandardMaterial({ color: 0xe443de, roughness: 0, metalness: .9, wireframe: true })
     const object = new THREE.Mesh(geometry, material)
@@ -84,6 +87,17 @@ onMounted(() => {
     })
     player.loadVideoById(songs[songIndex.value].id, 0, '144p')
     player.pauseVideo()
+
+    interact('.musicplayer-wrapper').draggable({
+        allowFrom: '.musicplayer-wrapper',
+        listeners: {
+            move(ev) {
+                position.value.x += ev.dx
+                position.value.y += ev.dy
+                ev.target.style.transform = `translate(${position.value.x}px, ${position.value.y}px)`
+            }
+        }
+    })
 })
 
 function calculateProgress(): number {
@@ -238,7 +252,7 @@ function attachKeybinds() {
     display: flex;
     bottom: 1rem;
     left: 1rem;
-    transition: .5s;
+
 }
 
 .player-wrapper {

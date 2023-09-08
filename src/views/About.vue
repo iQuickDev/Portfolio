@@ -14,7 +14,7 @@ let age: string = (
     new Date("2004-09-10T00:00:00+0100").getTime() - new Date().getTime()
   ) /
   (1000 * 3600 * 24 * 365)
-).toFixed(0);
+).toFixed(0)
 </script>
 
 <template>
@@ -233,10 +233,6 @@ a:hover {
   padding: 5px;
 }
 
-.contacts {
-  width: 100%;
-  height: 15%;
-}
 
 .info {
   left: 25vw;
@@ -277,6 +273,10 @@ a:hover {
   width: 120px;
   height: 120px;
   margin-bottom: 5px;
+}
+
+.contacts {
+  width: 100%;
 }
 
 .contacts img {
@@ -334,7 +334,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .about-wrapper {
     overflow: auto;
   }
@@ -348,7 +348,41 @@ a:hover {
   }
 
   .contacts {
-    bottom: 20px;
+    margin-top: 10px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .contacts img {
+    width: 12%;
+    transition: 0.5s;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .pfp {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contacts {
+    margin-top: 10px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .contacts img {
+    width: 15%;
+    transition: 0.5s;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contacts {
+    margin-top: 10px;
     width: 90%;
     text-align: center;
   }
@@ -356,10 +390,8 @@ a:hover {
   .contacts img {
     width: 20%;
     transition: 0.5s;
-  }
-  .pfp {
-    width: 100px;
-    height: 100px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 </style>
