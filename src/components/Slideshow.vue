@@ -107,7 +107,6 @@ function changeSlide(slide : any) {
     overflow: hidden;
     border-radius: 20px;
     transform: rotate3d(4, -5, 1, 20deg);
-    animation: spin 5s linear infinite;
     border: 3px solid #e443de;
     box-shadow: 0 0 15px 2px #e443de;
     image-rendering: optimizeQuality;
@@ -177,6 +176,11 @@ a:hover {
 @media screen and (max-width: 600px) {
     .slideshow-wrapper {
         width: 90%;
+    }
+
+    .slide-description {
+        width: 90%;
+        bottom: -4%;
     }
 }
 </style>
