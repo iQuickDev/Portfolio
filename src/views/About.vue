@@ -36,7 +36,7 @@ let age: string = (
 				<a href="https://discordlookup.com/user/295310535107280908" target="_target"
 					><img id="discord" :src="discord"
 				/></a>
-				<a href="https://web.telegram.org/k/#@iQuickDev" target="_target"
+				<a href="https://t.me/iQuickDev" target="_target"
 					><img id="telegram" :src="telegram"
 				/></a>
 				<a href="https://instagram.com/iquickdev" target="_target"><img id="instagram" :src="instagram" /></a>
