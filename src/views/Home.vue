@@ -16,7 +16,7 @@ const subtitles: string[] = [
 	<div class="home-wrapper">
 		<div class="mainpanel-wrapper">
 			<div class="romboid"></div>
-			<img :src="profilePicture" alt="profile picture" />
+			<img :src="profilePicture"/>
 			<div class="name-container">
 				<h1>iQuick</h1>
 				<glitched-writer
@@ -60,6 +60,7 @@ const subtitles: string[] = [
 	height: 90%;
 	transform: translate(-50%, -50%) rotate(45deg);
 	border: 4px solid #e443de;
+	border-radius: 10px;
 }
 
 .name-container {
@@ -85,8 +86,31 @@ img {
 	height: 75%;
 	object-fit: cover;
 	user-select: none;
-	filter: drop-shadow(0 0 3px #637fef);
-	/* make this cuter with multiple colors */
+	filter: drop-shadow(0 0 5px #637fef);
+	transition: all .3s;
+	animation: pic-animation 4s linear infinite;
+}
+
+@keyframes pic-animation {
+	0% {
+		filter: drop-shadow(0 0 5px #637fef);
+	}
+
+	50% {
+		filter: drop-shadow(-8px 0px 5px #DA56CB) drop-shadow(8px 0px 5px #1AFAEF);
+	}
+
+	60% {
+		filter: drop-shadow(0 0 5px #637fef);
+	}
+
+	70% {
+		filter: drop-shadow(-8px 0px 5px #DA56CB) drop-shadow(8px 0px 5px #1AFAEF);
+	}
+
+	80% {
+		filter: drop-shadow(0 0 5px #637fef);
+	}
 }
 
 @media screen and (max-width: 600px) {

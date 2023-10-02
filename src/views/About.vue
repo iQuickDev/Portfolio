@@ -6,7 +6,7 @@ import discord from '../assets/images/discord.png'
 import github from '../assets/images/github.png'
 import telegram from '../assets/images/telegram.png'
 import instagram from '../assets/images/instagram.png'
-import youtube from '../assets/images/youtube.png'
+import linkedin from '../assets/images/linkedin.png'
 
 //@ts-ignore
 let age: string = (
@@ -40,8 +40,8 @@ let age: string = (
 					><img id="telegram" :src="telegram"
 				/></a>
 				<a href="https://instagram.com/iquickdev" target="_target"><img id="instagram" :src="instagram" /></a>
-				<a href="https://www.youtube.com/c/iQuickGaming/" target="_target"
-					><img id="youtube" :src="youtube"
+				<a href="https://www.linkedin.com/in/iquickdev" target="_target"
+					><img id="linkedin" :src="linkedin"
 				/></a>
 			</div>
 			<p class="email">Send emails to <a href="mailto: root@iquick.dev">root@iquick.dev</a></p>
@@ -244,8 +244,8 @@ a:hover {
 	filter: drop-shadow(-5px -5px 0px #e443de);
 }
 
-#youtube:hover {
-	filter: drop-shadow(-5px -5px 0px #f00);
+#linkedin:hover {
+	filter: drop-shadow(-5px -5px 0px #4444dd);
 }
 
 .email {
