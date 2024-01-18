@@ -99,7 +99,7 @@ body {
 	padding: 0;
 	background-color: #01001e;
 	color: #fff;
-	cursor: url('@/assets/images/cursor.png'), auto;
+	cursor: url('@/assets/images/cursor.webp'), auto;
 	overflow: hidden;
 }
 
