@@ -15,11 +15,11 @@ import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass.js' // CRT 
 import Sun from '../assets/images/scenery/sun.svg'
 import CityFar from '../assets/images/scenery/city_far.svg'
 import CityClose from '../assets/images/scenery/city_close.svg'
-import pX from '../assets/images/skybox/px.png'
-import nX from '../assets/images/skybox/nx.png'
-import pY from '../assets/images/skybox/py.png'
-import nZ from '../assets/images/skybox/nz.png'
-import invisible from '../assets/images/skybox/invisible.png'
+import pX from '../assets/images/skybox/px.webp'
+import nX from '../assets/images/skybox/nx.webp'
+import pY from '../assets/images/skybox/py.webp'
+import nZ from '../assets/images/skybox/nz.webp'
+import invisible from '../assets/images/skybox/invisible.webp'
 
 /////////////////////////////////////////////////////////////////////////////////
 // RETROWAVE SCENE

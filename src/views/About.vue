@@ -2,11 +2,11 @@
 import HorizontalDivider from '../components/HorizontalDivider.vue'
 import Skill from '../components/Skill.vue'
 import pfp from '../assets/images/pfp.jpg'
-import discord from '../assets/images/discord.png'
-import github from '../assets/images/github.png'
-import telegram from '../assets/images/telegram.png'
-import instagram from '../assets/images/instagram.png'
-import linkedin from '../assets/images/linkedin.png'
+import discord from '../assets/images/discord.webp'
+import github from '../assets/images/github.webp'
+import telegram from '../assets/images/telegram.webp'
+import instagram from '../assets/images/instagram.webp'
+import linkedin from '../assets/images/linkedin.webp'
 
 //@ts-ignore
 let age: string = (
